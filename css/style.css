@@ -1,0 +1,25 @@
+:root {
+  --first-color: #d0d0e7;
+  --scond-color: #452e52;
+  --third-color: #a2a2d0;
+}
+
+/* header */
+header {
+  background: var(--first-color);
+  color: var(--second-color);
+}
+
+/* main */
+.container {
+  --first-color: #ad74ce;
+}
+article h2 {
+  color: var(--first-color); /* 高優先權來自 container */
+}
+
+/* footer */
+footer {
+  background: var(--first-color);
+  color: var(--second-color);
+}
