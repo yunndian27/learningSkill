@@ -7,29 +7,53 @@
   <title>Learning Skill</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://yandex.st/highlightjs/7.3/styles/tomorrow-night-eighties.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- header 標題 -->
   <header>
-    <h1>Learning Skill</h1>
-    <!-- nav 導航連結欄 -->
-    <nav>
-      <ul>
-        <li><a href="">HTML</a></li>
-        <li><a href="">CSS</a></li>
-        <li><a href="">SCSS</a></li>
-        <li><a href="">Javascript</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Learning Skill</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">SCSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Javascript</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
+  
 
   <!-- main 網頁主要區塊 -->
   <main>
-    <!-- <article>
+    <article>
       <div class="container">
-        <h2>HTML5</h2>
-        <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, saepe!</P>
+        <h2 class="text-center my-2">HTML5</h2>
+        <section>
+          <ol>
+            <li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2623" target="_blank">金魚都能懂的這個網頁畫面怎麼切 - 金魚都能懂了你還怕學不會嗎</a></li>
+          </ol>
+        </section>
         <section>
           <h3>HTML 5 New Tags</h3>
           <a href="https://www.w3schools.blog/html5-new-elements">HTML5 New Elements</a>
@@ -38,18 +62,209 @@
           </div>
         </section>
       </div>
-    </article> -->
+    </article>
     <article>
       <div class="container">
-        <h2>CSS</h2>
-        <p></p>
+        <h2 class="text-center my-4">CSS</h2>
+        <section>
+          <ol>
+            <li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2072" target="_blank">金魚都能懂的網頁設計入門 - 金魚都能懂了你還怕學不會嗎</a></li>
+            <li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2623" target="_blank">金魚都能懂的這個網頁畫面怎麼切 - 金魚都能懂了你還怕學不會嗎</a></li>
+            <li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799" target="_blank">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a></li>
+          </ol>
+        </section>
+        <section>
+          <h3>CSS 選取器</h3>
+          <ol>
+            <li>Tag</li>
+            <li>class</li>
+            <li>ID</li>
+            <li>屬性</li>
+            <li>僞元素(虛擬元素)</li>
+            <li>僞類別(虛擬類別)
+              <ul>
+                <li>動態僞類別（:hover、:active...等）</li>
+                <li>結構僞類別（:first-child、:last-child...等）</li>
+                <li>迴圈僞類別（:nth-child、:nth-of-type...等）</li>
+                <li>表單僞類別（:disabled、:enabled...等）</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+        <section class="s1CssSelect">
+          <h3>一個選取自由度超高的選取器</h3>
+          <ol>
+            <li>
+              <h4>選取【擁有特定屬性】的物件</h4>
+              <p>寫法是 <code>[屬性]</code></p>
+<pre>
+  &lt;img src="" alt="跳跳虎很可愛"&gt;
+  &lt;img src="" alt="史努比更可愛"&gt;
+  &lt;img src=""&gt;
+</pre>
+<pre>
+  img { border: 10px solid red; }
+  img[alt] { border:none; }
+</pre>
+              <div class="row mb-3 demo01">
+                <p>Demo 1</p>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/tiger.jpg" alt="跳跳虎很可愛">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/snoopy.jpg" alt="史努比更可愛">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/puddingDog.jpg">
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4>選取屬性值【完全等於】特定文字的物件</h4>
+              <p>寫法是 <code>[屬性=值]</code></p>
+<pre>
+  &lt;img src="" alt="跳跳虎是橘色的"&gt;
+  &lt;img src="" alt="史努比是白色的"&gt;
+  &lt;img src="" alt="布丁狗是黃色的"&gt;
+</pre>
+<pre>
+  img[alt="布丁狗是黃色的"] { border:none; }
+</pre>
+              <div class="row mb-3 demo02">
+                <p>Demo 2</p>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/tiger.jpg" alt="跳跳虎是橘色的">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/snoopy.jpg" alt="史努比是白色的">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/puddingDog.jpg" alt="布丁狗是黃色的">
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4>選取屬性值【開頭等於】特定文字的物件</h4>
+              <p>寫法是 <code>[屬性^=值]</code></p>
+<pre>
+  img[alt^="布丁狗"] { border:none; }
+</pre>
+              <div class="row mb-3 demo03">
+                <p>Demo 3</p>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/tiger.jpg" alt="跳跳虎很可愛">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/snoopy.jpg" alt="史努比更可愛">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/puddingDog.jpg" alt="布丁狗是黃色的">
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4>選取屬性值【結尾等於】特定文字</h4>
+              <p>寫法是 <code>[屬性$=值]</code></p>
+<pre>
+  &lt;h2&gt;圖片下載&lt;/h2&gt;
+  &lt;div class="download-list"&gt;
+    &lt;a href="images/demo/tiger.jpg""&gt;跳跳虎&lt;/a&gt;
+    &lt;a href="images/demo/snoopy.jpg""&gt;史努比&lt;/a&gt;
+    &lt;a href="images/demo/puddingDog.jpg""&gt;布丁狗&lt;/a&gt;
+  &lt;/div&gt;
+</pre>
+<pre>
+  a[href$="tiger.jpg"] { background-image: url("images/demo/tiger.jpg") }
+</pre>
+              <div class="row mb-3 demo04">
+                <p>Demo 4 - 圖片下載</p>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <a href="/images/demo/tiger.jpg">跳跳虎</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <a href="/images/demo/snoopy.jpg">史努比</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <a href="/images/demo/puddingDog.jpg">布丁狗</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4>選取屬性值中【包含特定文字】的物件</h4>
+              <p>寫法是 <code>[屬性*=值]</code></p>
+<pre>
+  &lt;img src="" alt="跳跳虎是橘色的"&gt;
+  &lt;img src="" alt="史努比是白色的"&gt;
+  &lt;img src="" alt="布丁狗是黃色的"&gt;
+</pre>
+<pre>
+  img[alt*="布丁狗"][alt*="黃色的"] { display:none; }
+</pre>
+              <div class="row mb-3 demo05">
+                <p>Demo 5</p>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/tiger.jpg" alt="跳跳虎是橘色的">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/snoopy.jpg" alt="史努比是白色的">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/puddingDog.jpg" alt="布丁狗是黃色的">
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4>選取屬性值中【包含特定單字】的物件</h4>
+              <p>寫法是 <code>[屬性~=值]</code>，作用的方式是『只要屬性值中有指定的單字』，針對中文語系國家來說，這個選取器的效果可能不容易測試出來，但是對於外語來說就會非常明顯了</p>
+<pre>
+  &lt;img src="" alt="tiger is cute"&gt;
+  &lt;img src="" alt="snoopy is Cute"&gt;
+  &lt;img src="" alt="puddingdogIsCute"&gt;
+</pre>
+<pre>
+  img[alt*="Cute"] { border-color:yellow; }
+</pre>
+<pre>
+  img[alt~="Cute"] { border-color:blue; }
+</pre>
+              <div class="row mb-3 demo06">
+                <p>Demo 6</p>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/tiger.jpg" alt="tiger is cute">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/snoopy.jpg" alt="snoopy is Cute">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                  <img src="/images/demo/puddingDog.jpg" alt="puddingdogIsCute">
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
       </div>
     </article>
   </main>
 
   <!-- footer 頁腳 -->
-  <footer>
-    <p><small>Copyright &copy; 2023 yunndian27. All rights reserved.</small></p>
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <p class="text-center"><small>Copyright &copy; 2023 yunndian27. All rights reserved.</small></p>
+    </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="https://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+  <script>
+    // hljs.initHighlightingOnLoad();
+    $(document).ready(function() {
+      $('pre').each(function(i, e) {
+        hljs.highlightBlock(e);
+      });
+    });
+  </script>
+
+
 </body>
 </html>
