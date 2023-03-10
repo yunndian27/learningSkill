@@ -4,22 +4,99 @@
   --third-color: #a2a2d0;
 }
 
+/* commen */
+/* *{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', snas-serif;
+  box-sizing: border-box;
+} */
+
+a {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+img {
+  width: 100%;
+}
+
 /* header */
-header {
+nav {
   background: var(--first-color);
   color: var(--second-color);
 }
 
 /* main */
+main {
+  padding-top: 5rem;
+}
+
 .container {
   --first-color: #ad74ce;
 }
+
 article h2 {
   color: var(--first-color); /* 高優先權來自 container */
 }
 
+/* 01. html5 */
+.html_img {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* hljs */
+pre {
+  background-color: #333;
+  color: #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+pre .title {
+  color: inherit;
+}
+
+/* 02. css */
+.s1CssSelect .row img {
+  border: 10px solid var(--first-color);
+}
+.s1CssSelect .demo01 img[alt] {
+  border: none;
+}
+.s1CssSelect .demo02 img[alt="布丁狗是黃色的"] {
+  border: none;
+}
+.s1CssSelect .demo03 img[alt^="布丁狗"] {
+  border: none;
+}
+.s1CssSelect .demo04 a {
+  padding-left:60px;
+  background-image: url("/images/demo/tiger.jpg");
+  background-size: 40px auto;
+  background-repeat: no-repeat;
+}
+.s1CssSelect .demo04 a[href$="snoopy.jpg"] {
+  background-image: url("/images/demo/snoopy.jpg");
+}
+.s1CssSelect .demo04 a[href$="puddingDog.jpg"] {
+  background-image: url("/images/demo/puddingDog.jpg");
+}
+.s1CssSelect .demo05 img[alt*="布丁狗"][alt*="黃色的"] {
+  display: none;
+}
+.s1CssSelect .demo06 img[alt*="Cute"] {
+  border-color: yellow;
+}
+.s1CssSelect .demo06 img[alt~="Cute"] {
+  border-color: blue;
+}
+
 /* footer */
 footer {
-  background: var(--first-color);
+  background: var(--third-color);
   color: var(--second-color);
 }
